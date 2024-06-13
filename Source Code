@@ -1,0 +1,66 @@
+#include <iostream>
+#include <stack>
+#include <string>
+
+using namespace std;
+
+void printMenu() {
+    cout << "===========================================================\n";
+    cout << "Pilihan Operasi Yang Tersedia :" << endl;
+    cout << "1. Push (menambahkan buku)" << endl;
+    cout << "2. Pop (menghapus buku teratas)" << endl;
+    cout << "3. Peek (melihat buku teratas)" << endl;
+    cout << "4. IsEmpty (memeriksa apakah tumpukan kosong)" << endl;
+    cout << "5. Size (melihat ukuran tumpukan)" << endl;
+    cout << "6. Exit (keluar dari program)" << endl;
+    cout << "Masukkan pilihan Anda : ";
+} 
+
+int main() {
+    stack<string> bookStack;
+    int pil;
+    string bookTitle;
+
+    while (true) {
+        printMenu();
+        cin >> pil;
+        if (pil == 1) {
+            cout << "Masukkan judul buku yang ingin ditambahkan : ";
+            cin.ignore();
+            getline(cin, bookTitle);
+            bookStack.push(bookTitle);
+            cout << "Buku \"" << bookTitle << "\" telah ditambahkan ke dalam tumpukan." << endl;
+        } else if (pil == 2) {
+            if (!bookStack.empty()) {
+                cout << "Buku \"" << bookStack.top() << "\" telah dihapus dari tumpukan." << endl;
+                bookStack.pop();
+            } else {
+                cout << "Tumpukan kosong. Tidak ada buku untuk dihapus." << endl;
+            }
+        } else if (pil == 3) {
+            if (!bookStack.empty()) {
+                cout << "Buku teratas dalam tumpukan : \"" << bookStack.top() << "\"" << endl;
+            } else {
+                cout << "Tumpukan kosong." << endl;
+            }
+        } else if (pil == 4) {
+            if (bookStack.empty()) {
+                cout << "Tumpukan kosong." << endl;
+            } else {
+                cout << "Tumpukan tidak kosong." << endl;
+            }
+        } else if (pil == 5) {
+            cout << "Jumlah buku dalam tumpukan : " << bookStack.size() << endl;
+        } else if (pil == 6) {
+            cout << "Keluar dari program." << endl;
+            break;
+        } else {
+            cout << "Perintah tidak dikenal. Silakan coba lagi." << endl;
+        }
+
+        cout << endl;
+    }
+
+    return 0;
+}
+

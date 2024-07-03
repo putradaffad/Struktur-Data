@@ -110,5 +110,6 @@ Jalur terpendek dari A ke K adalah A -> C -> E -> H -> J -> K dengan total jarak
 
 
 
+
 ## 2. Edge edge yang terhubung berdasarkan Directed Graph
 Edge = <A,C>, <B,A>, <C,D>, <C,H>, <C,G>, <E,C>, <F,E>, <F,H>, <H,I>, <I,G>, <I,J>, <J,K>, <K,H>, <K,F> 

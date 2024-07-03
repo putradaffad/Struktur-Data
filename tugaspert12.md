@@ -1,4 +1,4 @@
-Mari kita cek langkah-langkah menggunakan algoritma Dijkstra untuk menemukan jalur terpendek dari A ke K.
+1.Mari kita cek langkah-langkah menggunakan algoritma Dijkstra untuk menemukan jalur terpendek dari A ke K.
 Langkah-langkah Algoritma Dijkstra
 
 	1.	Inisialisasi Jarak:
